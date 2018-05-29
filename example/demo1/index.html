@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>半透明边框</title>
+	<style>
+		body{
+			background: #fff url("../assets/imgs/bg.jpg") no-repeat;
+		}	
+		.container {
+			margin: 20px auto;
+			font-size: 2em;
+		}
+		.box {
+			text-align: center;
+			padding: 1em;
+			margin: 0 auto;
+			line-height: 3em;
+			width: 10em;
+			border: 20px solid hsla(0, 0%, 100%, .4);
+			border-radius: 20px;
+			background-color: green;
+			background-clip: padding-box;
+		}
+		.box p {
+			margin: 0;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<div class="box">
+		<p>World</p>
+	</div>	
+</div>
+</body>
+</html>
