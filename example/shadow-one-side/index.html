@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>单侧投影</title>
+	<style>
+		.test {
+			margin: 20px auto;
+			line-height: 8em;
+			text-align: center;
+			height: 8em;
+			width: 8em;
+			border: 1px solid yellowgreen;
+			
+		}
+		.one-side {
+			box-shadow: 0 8px 4px -4px rgba(236,26,26,.5);
+		}
+
+		.show-two {
+			box-shadow: 4px 4px 8px -2px rgba(236,26,26,.5);
+		}
+
+		.two-side {
+			box-shadow: 8px 0 4px -4px rgba(236,26,26,.5), -8px 0 4px -4px rgba(236,26,26,.5);
+		}
+		.four-side {
+			box-shadow: 0 0 16px rgba(236, 26,26, .5);
+		}
+	</style>
+</head>
+<body>
+	<div class="test one-side"> 单侧投影</div>
+	
+	<div class="test show-two">
+	邻边投影</div>
+	<div class="test two-side">双侧投影</div>
+	<div class="test four-side">四边投影</div>
+</body>
+</html>
