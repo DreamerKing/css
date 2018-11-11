@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test</title>
+    <style>
+        #demo {
+            margin-bottom: 100px;
+        }
+
+        #demo span:nth-child(1) {
+            background-color: rgb(200, 200, 200)
+        }
+
+        #demo span:nth-child(2) {
+            background-color: rgb(200, 255, 200)
+        }
+
+        .highlight {
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="color: #aaa">
+        <p>使用原生 JavaScript 实现鼠标划取下面段落中任意长度的文字实现高亮该段文字。</p>
+        <p>要求：支持划取多个区域、区域之间允许包含关系，支持撤销上一步操作；（备注：高亮色随机即可）</p>
+    </div>
+    <hr />
+    <p>示例（仅演示）：</p>
+    <p id="demo">火光熄灭之后，山林归于漆黑寂静。<span>岳绮罗</span>坐在一棵老树下，无声的翕动了嘴唇：“张显宗。”她以手托腮，不带感情的发出声音：<span>“张显宗，我<span>牙疼</span>。”</span>向后靠向老树树干，她继续自言自语：“这辈子没活好，很糟糕。”</p>
+    <p>你的实现：</p>
+    <p id="target">火光熄灭之后，山林归于漆黑寂静。岳绮罗坐在一棵老树下，无声的翕动了嘴唇：“张显宗。”她以手托腮，不带感情的发出声音：“张显宗，我牙疼。”向后靠向老树树干，她继续自言自语：“这辈子没活好，很糟糕。”</p>
+    <script>
+        // code here
+        /* var content = document.getElementById("target")
+        var cont = [];
+        var contents = content.innerHTML;
+        for (var i = 0; i < contents.length; i++) {
+            cont = contents.split('', i);
+        }
+        */
+
+        function getColor(){
+            const COLORS = ["red", "blue", "green"];
+            let index = Math.floor(COLORS.length * Math.random());
+            return COLORS[index]
+        } 
+
+        function getTextArea(){
+            if(window.getSelection){
+                return window.getSelection.toString();
+            } else if(document.getSelection) {
+                return document.getSelection();
+            } else if(document.section) {
+                return document.section.createRange().text;
+            } else { 
+                return ''
+            }
+        }
+
+        const target = document.getElementById('target');
+
+        target.addEventListener('mouseup', function(e) {
+            console.log(getTextArea())
+            console.log(e, "dd")
+        })
+
+        //console.log(getTextArea())
+
+
+        console.log(getColor())
+
+       /*  function getRandomArrayElements(arr, count) {
+            var shuffled = arr.slice(0), i = arr.length, min = i - count, temp, index;
+            while (i-- > min) {
+                index = Math.floor((i + 1) * Math.random());
+                temp = shuffled[index];
+                shuffled[index] = shuffled[i];
+                shuffled[i] = temp;
+            }
+            return shuffled.slice(min);
+        }
+        window.onload = function () {
+            content.addEventListener('p', function (e)){
+
+            }
+
+
+            ventListener('input', function (e) {
+                var text = this.value;　　//要匹配的文字
+                for (var i = 0; i < pNodes.length; i++) {
+                    var pNode = pNodes[i];  //段落节点
+                    var pText = pTextArr[i];    //每一段的文字
+                    var values = pText.split(text);
+                    var pNodeText = values.join('<span class="bg-red">' + text + '</span>');
+                    pNode.innerHTML = pNodeText;
+                }
+            })
+        }
+        console.log(getRandomArrayElements(cont, 4)); */
+
+        // console.log(cont);
+        // var n = 5, s = "";
+        // function change(){
+        // for(var j=0;j<5;j++){
+        //     for(var i = 0; i < n; i++){
+        //     var rand = Math.floor(Math.random() * contents.length);
+        //     s += contents.charAt(rand);
+        // }
+        // }
+        // var reg = new RegExp(s,"g");
+        // var newinner = contents.replace(reg,'<span class="highlight">'+s+'</span>')//处理HTML字符串，为目标文本加上样式，即替换对应的HTML结构
+        // console.log(newinner)
+        // document.getElementById("target").innerHTML = newinner;//把处理后的HTML字符串写回到容器中
+        // console.log(s);
+        // //console.log(newinner)
+        // }
+
+    //     window.onload=function(){
+    //         content.onmousemove=function(){
+    //             change();
+    //             this.style.backgroundColor='#FFFF00';
+    //         }
+    //         content.onmouseout=function(){
+    //             this.style.backgroundColor='#FFFFFF';
+    //         }
+    // }
+
+    </script>
+</body>
+
+</html>

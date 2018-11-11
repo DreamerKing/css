@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Button</title>
+    <style>
+    .btn {
+        margin: 10px auto;
+        width: min-content;
+        padding: 6px 18px;
+        border: 1px solid #446d88;
+        background: #58a linear-gradient(#77a0bb, #58a);
+        border-radius: 4px;
+        box-shadow: 0 1px 5px gray;
+        color: white;
+        text-shadow: 0 -1px 1px #335166;
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .btn-2 {
+        margin: 10px auto;
+        width: min-content;
+        padding: 6px 18px;
+        border: 1px solid #446d88;
+        background: #58a linear-gradient(#77a0bb, #58a);
+        border-radius: 4px;
+        box-shadow: 0 1px 5px gray;
+        color: white;
+        text-shadow: 0 -1px 1px #335166;
+        font-size: 20px;
+        line-height: 1.5; /* 相对于字体 */
+    }
+    .btn-3 {
+        margin: .5em auto;
+        width: max-content;
+        padding: .3em .8em;
+        border: 1px solid #446d88;
+        background: #58a linear-gradient(#77a0bb, #58a);
+        border-radius: .2em;
+        box-shadow: 0 .05em .25em gray;
+        color: white;
+        text-shadow: 0 -.05em .05em #335166;
+        font-size: 125%;
+        line-height: 1.5;
+    }
+    .btn-4 {
+        margin: .5em auto;
+        width: max-content;
+        padding: .3em .8em;
+        border: 1px solid rgba(0, 0, 0, .1);
+        background: #58a linear-gradient(hsla(0, 0%, 100%, .2), transparent);
+
+        border-radius: .2em;
+        box-shadow: 0 .05em .25em rgba(0, 0, 0, .5);
+        color: white;
+        text-shadow: 0 -.05em .05em rgba(0, 0, 0, .5);
+        font-size: 125%;
+        line-height: 1.5; 
+    }
+    .ok {
+        background: #c00;
+    }
+    .cancel{
+        background: #6b0;
+    }
+    hr{
+        color: #6b0;
+        height: .5em;
+        background-color: currentColor; 
+    }
+    </style>
+</head>
+<body>
+    <div class="btn">Yes!</div> 
+    <div class="btn-2">Yes2!</div>
+    <div class="btn-3">Yes3!</div>
+    <div class="btn-4">Yes4!</div>
+    <div class="btn-4 ok">OK</div>
+    <div class="btn-4 cancel">Cancel</div> 
+    <hr/>       
+</body>
+</html>
