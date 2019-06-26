@@ -48,13 +48,13 @@
 		main {
 			margin: auto;
 		} */
-		body {
+		/* body {
 			display: flex;
 			min-height: 100vh;
 			margin: 0;
-		}
+		} */
 		/* 内部居中*/
-		main {
+		/* main {
 			margin: auto;
 			display: flex;
 			align-items: center;
@@ -62,14 +62,71 @@
 			text-align: center;
 			width: 18em;
 			height: 10em;
+		} */
+
+		/* 	body{
+				margin: 0;
+				padding: 0;
+			}
+			.container{
+				position: relative;
+				width: 100%;
+				height: 100px;
+			}
+
+			.box {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin-left: -50px;
+				margin-top: -50px;
+				width: 100px;
+				height: 100px;
+		} */
+
+		body{
+				margin: 0;
+				padding: 0;
+			}
+			/* .container{
+				position: relative;
+				width: 100%;
+				height: 100px;
+			}
+		.box {
+			position: absolute;
+			top: calc(50% - 10em);
+			left: calc(50% - 6em);
+			width: 100px;
+			height: 100px;
+		} */
+
+		.container {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			height: 100px;
+			width: 100%;
+			/* min-height: 100vh; */
+			margin: 0;
+		}
+		.box {
+			width: 100px;
+			justify-content: center;
+			height: 100px;
+			margin: auto;
 		}
 
 	</style>
 </head>
 <body>
-	<main>
+	<!-- <main>
 		<h1>垂直居中</h1>
 		<p>方法是想和实验出来的，不是光看就可以的！</p>
-	</main>
+	</main> -->
+	<div class="container">
+		<div class="box">Box</div>
+	</div>
 </body>
 </html>

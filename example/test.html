@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <style>
+
+        form h1{
+            background-color: #666;
+            color: #FFF;
+        }
+        .form-control{
+            display: flex;
+            flex-direction: row;
+            align-self: center;
+            justify-items: center;
+        }
+        .form-label{
+            display: inline-block;
+            flex: 1;
+        }
+        .form-item{
+            flex: 5;
+        }
+    </style>
+    <!-- <script src="main.js"></script> -->
+</head>
+<body>
+
+    <form>
+        <h1>基本设置</h1>
+        <div class="form-control">
+            <label for="filter" class="form-lable">过滤机制</label>
+            <div class="form-item">
+                <input type="radio" name="filter">白名单
+                <input type="radio" name="filter">黑名单
+            </div>
+            
+        </div>
+        <hr>
+        <div class="form-control">
+            <label for="functionCode" class="form-lable">功能码</label>
+            <div class="form-item">
+                <input type="checkbox" name="code" value="1">1
+                <input type="checkbox" name="code">2
+                <input type="checkbox" name="code">3
+                <input type="checkbox" name="code">4
+                <input type="checkbox" name="code">5
+                <input type="checkbox" name="code">6
+            </div> 
+        </div>
+    </form>
+</body>
+</html>

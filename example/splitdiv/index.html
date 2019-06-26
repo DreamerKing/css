@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>split div</title>
+    <style>
+        html, body{
+            margin: 0;
+            padding: 0;
+        }
+        .main{
+            /* position: relative; */
+            border: 1px solid green;
+            width: 100%;
+            height: 100vh;
+        }
+        .main div {
+            border: 1px solid springgreen;
+            width: 50%;
+            height: 100vh;
+        }
+        .box-1{
+            float: left;
+             /* display: inline-block; */
+             margin-right: 50%; 
+            /* position: absolute;
+            left: 0%; */
+        }
+        .box-2{
+            float: left;
+             /* display: inline-block; */
+            /* position: absolute;
+            left: 50%; */
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box-1">div1</div>
+        <div class="box-2">div2</div>
+    </div>
+</body>
+</html>
