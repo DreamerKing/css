@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>currentColor</title>
+    <style>
+        .box {
+            margin: 10px auto;
+            color: aqua;
+            padding: 10px;
+            background-color: currentColor;
+        }
+        .box img {
+            border: 1px solid currentColor;
+        }
+        .link{
+            text-decoration: none;
+            color: #333;
+        } 
+        .link:hover{
+            color:darkmagenta;
+        }
+        .icon{
+            display: inline-block;
+            width: 16px;
+            height: 20px;
+            background-position: -20px 0;
+            background-image: url("./sprite_icons.png");
+           background-color: currentColor; 
+        }
+
+.ico-a { 
+    color: #333; 
+    }
+.ico-a:hover { 
+    color: #4D77C6; 
+    text-decoration: none; 
+}
+
+.ico { 
+    display: inline-block; 
+    width: 20px; height: 20px; 
+    /* background: url(css3-icons.png) no-repeat -99em;  */
+    vertical-align: -3px; 
+}
+
+:root .ico { 
+    background-image: none;
+     position: relative; 
+}
+.ico::before, 
+.ico::after, 
+.ico > z, 
+.ico > z::before, 
+.ico > z::after { 
+    content: ''; 
+    position: absolute; 
+}
+.ico-send::before { 
+    width: 12px;
+     height: 8px; 
+     border: solid currentColor; 
+     border-width: 0 1px 1px; 
+     top: 11px; left: 3px; 
+}
+.ico-send::after { 
+    width: 6px; 
+    height: 1px; 
+    border-left: 4px solid currentColor; 
+    border-right: 4px solid currentColor; 
+    top: 10px; 
+    left: 3px; 
+}
+.ico-send z::before { 
+    width: 5px; 
+    height: 10px; 
+    border-top: 1px solid currentColor; 
+    border-left: 1px solid currentColor; 
+    border-top-left-radius: 5px 10px; 
+    border-bottom-left-radius: 5px 0; 
+    left: 9px; 
+    top: 5px; 
+}
+.ico-send z::after { 
+    width: 4px; 
+    height: 4px; 
+    border-top: 1px solid currentColor; 
+    border-right: 1px solid currentColor; 
+    top: 4px; 
+    left: 10px; 
+}
+</style>
+</head>
+<body>
+    <div class="box"><img src="./b.jpeg" alt=""></div>
+    <div>
+        <span>Icon</span>
+        <a href="#" class="link">
+            <i class="icon"></i>add message
+        </a>
+    </div>
+    <p><a href="javascript:" class="ico-a"><i class="ico ico-send">
+                <z>
+            </i>发送该文件</a></p>
+</body>
+<script>
+    let img = document.createElement('img');
+        img.src= "./message.png";
+        img.width = 300;
+        img.height = 300;
+    document.body.appendChild(img);
+</script>
+</html>

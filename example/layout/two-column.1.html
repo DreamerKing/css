@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Two column</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        /*  header{
+            border: 1px rosybrown solid;
+            height: 10vh;
+        }
+        nav {
+            min-height: 80vh;
+            width: 200px;
+            float: left;
+            border: 1px rosybrown solid;
+        }
+
+      main::after{
+          content: " ";
+          display: block;
+          visibility: hidden;
+          clear: both;
+      }
+      footer{
+          height: 10vh;
+        border: 1px rosybrown solid;
+          
+      } */
+        /* 1. float + margin-left */
+        /*  
+      header{
+            border: 1px rosybrown solid;
+            height: 10vh;
+        }
+        nav {
+            min-height: 80vh;
+            width: 200px;
+            float: left;
+            border: 1px rosybrown solid;
+        }
+
+      main{
+          margin-left: 220px;
+         
+      }
+      footer{
+        clear: both;
+        height: 10vh;
+        border: 1px rosybrown solid;
+      } 
+      */
+        /* 2. calc(100% - width) + float */
+        /*   
+    header{
+            border: 1px rosybrown solid;
+            height: 10vh;
+        }
+        nav {
+            min-height: 80vh;
+            width: 200px;
+            float: left;
+            border: 1px rosybrown solid;
+        }
+
+      main{
+          margin-left: 220px;
+          width: calc(100% - 220px); 
+      }
+      footer{
+          clear: both;
+        height: 10vh;
+        border: 1px rosybrown solid;
+      } 
+       */
+
+        /* 3. absolute + margin-left */
+        /* header{
+            border: 1px rosybrown solid;
+            height: 10vh;
+        }
+        nav {
+            min-height: 80vh;
+            width: 200px;
+            position: absolute;
+            top: 10vh;
+            left: 0;
+            border: 1px rosybrown solid;
+        }
+
+      main{
+        min-height: 80vh;
+        margin-left: 220px;
+      }
+      footer{
+          clear: both;
+        height: 10vh;
+        border: 1px rosybrown solid;
+      } 
+ */
+ /* 4. float + BFC */
+/* 
+        header {
+            border: 1px rosybrown solid;
+            height: 10vh;
+        }
+
+        nav {
+            min-height: 80vh;
+            width: 200px;
+            float: left;
+            border: 1px rosybrown solid;
+        }
+
+        main {
+            overflow: hidden;
+            min-height: 80vh;
+            margin-left: 220px;
+        }
+
+        footer {
+            height: 10vh;
+            border: 1px rosybrown solid;
+        } 
+        
+        */
+
+        header {
+            border: 1px rosybrown solid;
+            height: 10vh;
+        }
+
+        nav {
+            min-height: 80vh;
+            width: 200px;
+            float: left;
+            border: 1px rosybrown solid;
+        }
+
+        main {
+            overflow: hidden;
+            min-height: 80vh;
+            margin-left: 220px;
+        }
+
+        footer {
+            height: 10vh;
+            border: 1px rosybrown solid;
+        } 
+    </style>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>Header</header>
+        <nav>Nav</nav>
+        <main>Main</main>
+        <footer>Footer</footer>
+    </div>
+</body>
+
+</html>

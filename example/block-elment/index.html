@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.bootcss.com/iScroll/5.2.0/iscroll.js"></script>
+    <title>块级元素</title>
+    <style>
+        .box-1 {
+            background-color: aqua;
+            padding: 10px;
+        }
+        .box-1 > img {
+            float: right;
+        }
+        .clear::after{
+            content: '';
+            /* list-item table */
+            display: table; 
+            clear:right;
+        }
+        .box-2 {
+            display: inline-table;
+            background-color: blue;
+            width: 200px;
+        }
+        .box-2 > p {
+            display: table-cell;
+        }
+        .box-3 table {
+            width: 280px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .box-4 {
+            width: 120px;
+            padding: 10px;
+            white-space: nowrap;
+            background-color: gold;
+        }
+        .child {
+            padding: 5px;
+            display: inline-block;
+            background-color: blue;
+        }
+
+        .box-5 {
+            background-color: #cd0000;
+        }
+        .nav {
+            /* width: 100%;    */
+            display: block;
+            margin: 0 10px;
+            padding: 10px;
+            border-bottom: 1px solid #b70000;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .box-6 {
+            width: 36px;
+            margin: 20px auto;
+        }
+
+        .box-7 {
+            text-align: center;
+            width: 160px;
+        }
+        .content {
+            display: inline-block;
+            text-align: left;
+        }
+        .box-8 {
+            margin: 10px auto;
+        }
+        .ao, .tu {
+            display: inline-block;
+            width: 0;
+            font-size: 16px;
+            line-height: 20px;
+            margin: 36px;
+            color: #fff;
+        }
+        .ao::before {
+            content: "Love你Love";
+            outline: 1px solid #cd0000;
+        }
+        .tu {
+            direction: rtl;
+        }
+        .tu::before {
+            content: "我Love你";
+            outline: 1px solid #cd0000;
+        }
+
+        .box-9.wrap {
+            /* width: 300px; */
+            height: 200px;
+            position: relative;
+            overflow: hidden;
+        }
+        .wrap > ul {
+            position: absolute;
+            white-space: nowrap;
+            list-style: none;
+        }
+        .wrap li {
+            display: inline;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box-1 clear">
+        <img src="../assets/imgs/b.jpeg" alt="">
+    </div>
+    <div class="box-2">
+        <p>1</p>
+        <p>2</p>
+    </div>
+    <div class="box-3">
+        <table>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+        </table>
+    </div>
+    <div class="box-4">
+        <div class="child">
+            恰是一江春水向东流，流到断崖也不回头
+        </div>
+    </div>
+    <div class="box-5">
+        <a href="#" class="nav">导航</a>
+        <a href="#" class="nav">导航</a>
+        <a href="#" class="nav">导航</a>
+    </div>
+    <div class="box-6"><button>按钮</button></div>
+    <div class="box-7">
+        <p class="content">少量文字居中</p>
+    </div>
+    <div class="box-7">
+        <p class="content">大量文字左对齐大量文字左对齐大量文字左对齐大量文字左对齐大量文字左对齐</p>
+    </div>
+    <div class="box-8">
+        <span class="ao"></span>
+        <span class="tu"></span>
+    </div>
+    <div class="box-9 wrap" id="wrap">
+        <ul>
+            <li><img src="../assets/imgs/b.jpeg" alt=""></li>
+            <li><img src="../assets/imgs/b.jpeg" alt=""></li>
+            <li><img src="../assets/imgs/b.jpeg" alt=""></li>
+            <li><img src="../assets/imgs/b.jpeg" alt=""></li>
+            <li><img src="../assets/imgs/b.jpeg" alt=""></li>
+            <li><img src="../assets/imgs/b.jpeg" alt=""></li>
+        </ul>
+    </div>
+    <script>
+        new IScroll("#wrap",{
+            scrollbars: true,
+            scrollX: true,
+            scrollY: false
+        });
+    </script>
+</body>
+</html>

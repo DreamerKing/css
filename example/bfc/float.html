@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>等高布局</title>
+    <style>
+        .box {
+            border: 2px solid #446d88;
+            background-color: rgb(224, 206, 247);
+            /* overflow: hidden; */
+            /* 一个新的 display 属性的值，它可以创建无副作用的BFC。在父级块中使用 display: flow-root 可以创建新的BFC。 */
+            display: flow-root; 
+        }
+
+        .ft {
+            float: left;
+            width: 200px;
+            height: 150px;
+            background-color: white;
+            border: 1px solid black;
+            padding: 10px;
+        }
+        /* .box::after {
+            display: block;
+            content: '';
+            clear: both;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="ft">I'm a floted box!</div>
+        <p>I'm content inside the content</p>
+    </div>
+</body>
+
+</html>

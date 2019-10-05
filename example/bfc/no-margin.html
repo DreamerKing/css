@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>外边距塌陷</title>
+    <style>
+        .blue,
+        .red-inner {
+            height: 50px;
+            margin: 10px 0;
+        }
+
+        .blue {
+            background: blue;
+        }
+        .red-inner {
+            background: #6b0;
+        }
+
+        .red-outer {
+            /* overflow: hidden; */
+            display: flow-root;
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="blue"></div>
+    <div class="red-outer">
+        <div class="red-inner">Red inner</div>
+    </div>
+</body>
+
+</html>

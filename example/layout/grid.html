@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grid Layout</title>
+    <style>
+        .container {
+            display: grid;
+            /* grid-template-columns: [one] 1fr [two second]2fr 1fr [end];
+            grid-template-rows: [l1]100px [l2] auto [l3];
+            grid-template-areas: "header header header" "footer f2 f3"; */
+            grid-template: [one] "header header header" 1fr [two second]
+                           [l2] "footer f2 f3" 100px [end] / [l1] 300px [l2] auto [l3] auto [cend];
+            /* grid-column-gap: 10px;
+            grid-row-gap: 20px; */
+            gap: 20px 10px;
+          /*   justify-items: center;
+            align-items: center; */
+            place-items: start center;
+        }
+        .item {
+
+            padding: 10px;
+            border: 1px salmon solid;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">One</div>
+        <div class="item">Two</div>
+        <div class="item">Three</div>
+        <div class="item">Four</div>
+        <div class="item">Five</div>
+        <div class="item">Six</div>
+        <div class="item">Seven</div>
+        <div class="item">Eight</div>
+    </div>
+</body>
+</html>
